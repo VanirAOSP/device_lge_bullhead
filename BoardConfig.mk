@@ -162,4 +162,8 @@ USE_CLANG_PLATFORM_BUILD := true
 BOARD_USES_CYANOGEN_HARDWARE := true
 BOARD_HARDWARE_CLASS := hardware/cyanogen/cmhw
 
+# CM Hardware
+BOARD_USES_CYANOGEN_HARDWARE := true
+BOARD_HARDWARE_CLASS := hardware/cyanogen/cmhw
+
 -include vendor/lge/bullhead/BoardConfigVendor.mk
