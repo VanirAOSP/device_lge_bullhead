@@ -48,8 +48,7 @@ PRODUCT_COPY_FILES += \
 
 # Audio
 PRODUCT_COPY_FILES += \
-    device/lge/bullhead/audio_policy.conf:system/etc/audio_policy.conf \
-    device/lge/bullhead/audio_effects.conf:system/etc/audio_effects_vendor.conf \
+    device/lge/bullhead/audio_effects.conf:system/etc/audio_effects.conf \
     device/lge/bullhead/mixer_paths.xml:system/etc/mixer_paths.xml \
     device/lge/bullhead/audio_platform_info.xml:system/etc/audio_platform_info.xml \
     device/lge/bullhead/audio_policy_configuration.xml:system/etc/audio_policy_configuration.xml \
@@ -193,10 +192,6 @@ PRODUCT_PACKAGES += \
     librmnetctl \
     rmnetcli
 
-# Gello
-PRODUCT_PACKAGES += \
-    Gello
-
 # GPS configuration
 PRODUCT_COPY_FILES += \
     device/lge/bullhead/gps.conf:system/etc/gps.conf
@@ -227,12 +222,7 @@ PRODUCT_PACKAGES += \
     libmmcamera_interface2 \
     libmmjpeg_interface \
     libqomx_core \
-    mm-qcamera-app \
-    Snap
-
-# Snap Config
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.camera.cpp.duplication=false
+    mm-qcamera-app
 
 # Sensor & activity_recognition HAL
 TARGET_USES_NANOHUB_SENSORHAL := true
@@ -282,8 +272,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.audio.fluence.voicerec=false \
     persist.audio.fluence.speaker=true \
     persist.speaker.prot.enable=true \
-    ro.config.vc_call_vol_steps=7 \
-    audio.offload.pcm.24bit.enable=true
+    ro.config.vc_call_vol_steps=7
 
 # Reduce client buffer size for fast audio output tracks
 PRODUCT_PROPERTY_OVERRIDES += \
